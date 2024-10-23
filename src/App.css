@@ -1,38 +1,83 @@
-.App {
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Ciemne tło */
+  color: #ffffff; /* Jasny tekst */
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  margin: 20px;
+  padding: 20px;
+  background-color: #1e1e1e; /* Ciemniejszy odcień dla sekcji menu */
+  border-radius: 8px; /* Zaokrąglenie rogów */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Cień */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu h2 {
+  color: #ffcc00; /* Złoty kolor nagłówka */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Odstęp między elementami */
 }
 
-.App-link {
-  color: #61dafb;
+.menu-item {
+  border: 1px solid #333; /* Ciemniejsza granica */
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px; /* Zaokrąglenie rogów */
+  background-color: #242424; /* Tło dla drinków */
+  transition: transform 0.2s, box-shadow 0.2s; /* Animacje */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-item:hover {
+  transform: scale(1.05); /* Powiększenie przy najechaniu */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); /* Cień przy najechaniu */
+}
+
+.menu-item h3 {
+  color: #ffcc00; /* Złoty kolor nazwy drinka */
+}
+
+.menu-item p, .menu-item h4 {
+  color: #f0f0f0; /* Jasny kolor dla pozostałego tekstu */
+}
+
+.menu-item ul {
+  list-style-type: none; /* Usunięcie punktów z listy */
+  padding: 0; /* Usunięcie domyślnego wypełnienia */
+}
+
+.menu-item ul li {
+  margin: 5px 0; /* Odstęp między składnikami */
+  color: #e0e0e0; /* Szary kolor składników */
+}
+
+.button {
+  background-color: #ffcc00; /* Złoty kolor przycisku */
+  color: #121212; /* Ciemny tekst przycisku */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px; /* Zaokrąglenie przycisku */
+  transition: background-color 0.3s, transform 0.2s; /* Animacja przycisku */
+}
+
+.button:hover {
+  background-color: #e6b800; /* Ciemniejszy odcień złotego przycisku */
+  transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
+}
+
+footer {
+  margin-top: 20px;
+  background-color: #494747; /* Ciemne tło stopki */
+  padding: 10px;
+  border-radius: 8px; /* Zaokrąglenie rogów stopki */
 }
