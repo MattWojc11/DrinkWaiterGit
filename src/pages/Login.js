@@ -1,46 +1,51 @@
-// src/pages/Login.js
+// src/components/Login.js
 import React, { useState } from 'react';
-import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
+import './Auth.css'; 
 
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      // Redirect to home or wherever after successful login
-    } catch (error) {
-      setError(error.message);
+      setError('');
+      onLoginSuccess(); // Funkcja wywoływana po udanym logowaniu
+    } catch (err) {
+      setError('Błąd logowania: ' + err.message);
     }
   };
 
   return (
-    <div className="container">
-      <h2>Logowanie</h2>
-      <div className="form-container">
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+    <div>
+      <h3>Zaloguj się</h3>
+      <form onSubmit={handleLogin}>
+        <div>
+          <label>Email:</label>
+          <input 
+            type="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
           />
-          <input
-            type="password"
-            placeholder="Hasło"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
+        </div>
+        <div>
+          <label>Hasło:</label>
+          <input 
+            type="password" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
           />
-          <button className="button" type="submit">Zaloguj się</button>
-        </form>
-        {error && <p className="error">{error}</p>}
-      </div>
+        </div>
+        <button type="submit">Zaloguj</button>
+      </form>
+      {error && <p>{error}</p>}
     </div>
   );
 };

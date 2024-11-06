@@ -75,9 +75,72 @@ body {
   transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
 }
 
+/* Styl stopki */
 footer {
   margin-top: 20px;
-  background-color: #494747; /* Ciemne tło stopki */
+  background-color: #1d1d1d; /* Jeszcze ciemniejsze tło */
+  padding: 15px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Styl logowania/rejestracji */
+.auth-container {
+  background-color: #1b1b1b; /* Ciemniejsze tło formularza */
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.auth-container h2 {
+  font-size: 24px;
+  color: #ffcc00; /* Złoty kolor nagłówka */
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input {
+  background-color: #333; /* Ciemniejsze pola tekstowe */
+  border: 1px solid #555; /* Ciemniejsza ramka */
+  color: #ffffff; /* Biały tekst */
   padding: 10px;
-  border-radius: 8px; /* Zaokrąglenie rogów stopki */
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #ffcc00; /* Złoty kolor na fokus */
+  outline: none;
+}
+
+.auth-button {
+  background-color: #ffcc00; /* Złoty kolor przycisku */
+  color: #121212; /* Ciemny tekst na przycisku */
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.auth-button:hover {
+  background-color: #e6b800; /* Ciemniejszy odcień przycisku */
+}
+
+.error-message {
+  color: #ff4d4d; /* Czerwony kolor błędu */
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }

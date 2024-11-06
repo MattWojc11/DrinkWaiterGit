@@ -1,0 +1,98 @@
+/* src/components/AdminPanel.css */
+
+.admin-panel {
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .admin-panel h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .order-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+  }
+  
+  .order-title {
+    color: #ffcc00;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .order-items {
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #242424;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  
+  .order-total {
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 10px;
+  }
+  
+  .numpad {
+    margin-top: 15px;
+    color: #ffcc00;
+  }
+  
+  .numpad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .numpad-grid button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .numpad-grid button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
+  
+  .button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+  }
+  
+  .button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
